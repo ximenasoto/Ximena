@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Documento Raiz-->
+<html lang="es">
+
+<!--Informacion para el navegador-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Aqui va el nombre de tu pagina-->
+    <title>"BTS"</title>
+    <!--Link que te enlaza a Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!--Link a tu hoja de estilos css-->
+    <link rel="stylesheet" href="style.css">
+
+    <head>
+
+        <!--body = Estructura de la Pagina. Todo lo que esta en el BODY es lo que se vera en tu pagina.-->
+
+    <body>
+
+        <!--Navegador-->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#biografia">Biografía</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#discografia">Discografía</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#integrantes">Integrantes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#biografia">Biografía</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#discografia">Discografía</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#integrantes">Integrantes</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+        </nav>
+        <!--Carrusel-->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!--En el src pon la ruta y nombre de tu imagen-->
+                    <img src="https://th.bing.com/th/id/OIP.UoFYrxVRqfVqLQ0AGPAThAHaEE?w=312&h=180&c=7&r=0&o=5&pid=1.7 bts"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="data:image/jpeg;base64,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"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://th.bing.com/th/id/OIP.2YEKc6yfkmJjTAHJZNtUFAHaFp?w=231&h=180&c=7&r=0&o=5&pid=1.7 bts"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+    </body>
+
+    <h1 style="background-color:#b35c90">
+        "Army Forever...."</h1>
+    <p style="background-color:#b07add;">sarange kpop.</p>
+    <H1 style="color:#050505;">BTS "I purple you"</H1>
+    <br>
+    <br>
+    <div>
+        <p>BTS es un grupo surcoreano formado en Seúl en 2010, que debutó el 13 de junio de 2013 bajo la compañía Big
+            Hit
+            Entertainment.Está compuesto por siete integrantes: Jin, Suga, J-Hope, RM, Jimin, V y Jungkook, quienes son
+            los que
+            coescriben y coproducen la mayor parte de su material discográfico.</p>
+        <img src="BTS.jpg" alt="BTS" width="100%">
+        <p>El nombre del grupo, BTS, es una abreviatura de la expresión coreana Bangtan Sonyeondan, que literalmente
+            significa “Boy
+            Scouts a prueba de balas”.
+
+            El grupo debuta el 13 de junio de 2013 con la canción “No More Dream”.
+
+            El nombre de su club de fan oficial es A.R.M.Y, acrónimo de “Adorable Representative MC for Youth”.A partir
+            de 2015
+            empieza a ganar popularidad y a establecer su reputación como un grupo socialmente consciente con sus
+            lanzamientos de la
+            serie “The Most Beautiful Moment in Life Part 1, Part 2”, y el álbum recopilatorio ”The Most Beautiful
+            Moment in Life:
+            Young Forever”, con los que también entra por primera vez en la lista Billboard 200.
+
+            "Love Yourself Answer" es el tercer álbum recopilatorio de la boy band surcoreana BTS, lanzado el 24 de
+            agosto de 2018
+            por Big Hit Entertainment y está disponible en cuatro versiones diferentes: S, E, L y F​.El álbum contiene
+            veinticinco
+            canciones.</p>
+        <img src="https://korebu.com/wp-content/uploads/2020/05/En-Tatl%C4%B1-BTS-%C3%9Cyesi-Kim-1.jpg" alt="BTS"
+            width="60%">
+    </div>
+    <div>
+        <p>En 2016 lanzan el álbum "Wings", que se convirtió en el primer disco de la banda en vender más de un millón
+            de copias en
+            Corea del Sur,4​ como con su reedición You Never Walk Alone.
+
+            Para 2017, BTS empieza a ser reconocido a nivel internacional como el principal promotor de la ola coreana,
+            especialmente en el mercado estadounidense; fue la primera banda coreana en recibir las certificaciones de
+            oro y de
+            platino por parte de la RIAA con los sencillos "DNA" y "MIC Drop", respectivamente.
+            Su EP "Love Yourself: Her" debutó en el séptimo puesto en la Billboard 200,7​ la mejor posición alcanzada
+            por un artista
+            coreano hasta ese momento. Poco tiempo después, con el álbum
+
+            En 2018 lanzan "Love Yourself: Tear" y Love Yourself: Answer. luego en 2019 llega el álbum "Map of the Soul:
+            Persona"
+
+            El 17 de enero de 2020 BTS lanza el video artístico de "Black Swan", primer sencillo de su álbum "Map of the
+            Soul: 7".
+            El 28 de enero BTS participa en el show televisivo estadounidense "The Late Late Show", donde además de ser
+            entrevistados por el conductor James Corden, interpretaron por primera vez en vivo "Black Swan". El 21 de
+            febrero, de la
+            mano del video "ON Kinetic Manifesto Film: Come Prima" lanzan su esperado álbum "Map of the Soul: 7", que
+            contiene 29
+            canciones.</p>
+        <img src="https://0.soompi.io/wp-content/uploads/2018/08/26125519/BTS-25.jpg" alt="bts love yourself"
+            width="60%">
+    </div>
+    <div>
+        <p>El 27 de de febrero lanza el video oficial de "On", una superproducción con una historia de un pueblo en
+            busca de la
+            liberación.
+            El 4 de marzo lanzan el video oficial para su canción Black Swan. El 22 de junio lanza "Stay Gold" ,
+            adelanto de su
+            próximo álbum: "Map Of The Soul: 7 - The Journey", luego estrenan el video el 26 de junio. El 21 de agosto
+            BTS da a
+            conoce con un video su single “Dynamite”. El 20 de noviembre con el estreno del video “Life Goes On”, BTS
+            presenta su
+            álbum BE con un total de 8 canciones.
+            A principio de diciembre la Boy band estuvo presente en la primera noche del Festival Musical FNS 2020,
+            evento musical
+            realizado por la cadena japonesa Fuji TV.
+            En 2020 también lanzan el álbum "BE".
+            El 23 de diciembre BTS interpretó "Dynamite" para un especial de Navidad que hizo para CDTV Live! Live!
+            donde interpretó
+            su hit "Dynamite".
+
+            El 25 de marzo del 2021, BTS comparte en Youtube el teaser de "Film out", el primer sencillo del su próximo
+            disco, que
+            se llamará "BTS, The best", un disco recopilatorio. El 6 de abril, BTS rompió record con el estreno del
+            video de "Film
+            out".
+            El 21 de mayo BTS presenta "Butter", su nueva canción en inglés.
+            El 4 de junio lanza una versión de "Butter", titulada “Butter (Cooler Remix)”.</p>
+        <img src="https://6.viki.io/image/2c1cb9257f064590a1a44ea06e0b8cb6.jpeg?s=900x600&e=t" alt="bts Butter"
+            width="60%">
+    </div>
+
+    <div>
+        <br>
+        <br>
+        <a>https://es-la.facebook.com/bangtan.official/</a>
+        <br>
+        <a>https://es-la.facebook.com/BangtanBoysDailyBTS/groups</a>
+    </div>
+
+    <div>
+        <h3>BTS(albums)</h3>
+        <ol>
+            <li>Dark & wild</li>
+            <li>Wings</li>
+            <li>Youth”</li>
+            <!--lista no ordenada-->
+            <div>
+                <h1 style="color:#330000;">Nombres de los integrantes</h1>
+                <li>kim Namjoon</li>
+                <li>kim Seok Jin</li>
+                <li>Min Yongi</li>
+                <li>Jeon Jungkook</li>
+                <li>hyun hoseok</li>
+                <li>Park Jimin</li>
+                <li>Kim Taehyung</li>
+        </ol>
+    </div>
+    </div>
+
+    <!--Seccion integrantes-->
+    <div id="integrantes">
+        <h2>Integrantes</h2>
+        <!--Integrante 1-->
+        <div class="card" style="width: 18rem;">
+            <img src="https://th.bing.com/th/id/OIP.9a7dAlXi-BQR_VC2Vibq3AHaKe?w=204&h=289&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="Kim Namjon">
+            <div class="card-body">
+                <p class="card-text">Kim Nam-Joon significa "Genio del sur" es el nombre de pila que le pusieron. En la
+                    actualidad es mejor conocido como RM y es uno de los integrantes mas talentosos de la exitosa banda
+                    de K-Pop BTS.
+
+                    RM o Rap Moster, literalmente "Moustruo del Rap" fue el primer integrante de BTS y por varios años
+                    fue el líder de la banda, hasta en diciembre de 2019 cuando el grupo nombró a J-Hope como nuevo
+                    líder..
+                    Datos personales de Rap Monster
+                    Nombre real: Kim Nam Joon (김남준).
+                    Apodos: RapMon (abreviación de Rap Monster), Líder Mon, Dios de la destrucción.
+                    Profesión: Rapero, compositor, productor y cantante.
+                    Fecha de nacimiento:12 de septiembre de 1994 (25 años).
+                    Lugar de nacimiento: Ilsan-Seúl, Corea del Sur.
+                    Estatura: 181cm.
+                    Peso: 64kg.
+                    Tipo de sangre: A.
+                    Signo zodiacal: Virgo.
+                    Signo chino: Perro.
+                    Idiomas: Coreano (lengua materna), inglés (fluido), japonés (intermedio).
+                    Hobbie: Navegar por internet, escuchar música, componer canciones, jugar al baloncesto y fútbol.
+                    Familia: Padres, hermana menor.
+                    Persona que tiene un impacto sobre el: Su mamá
+                    Modelo a seguir: Kanye West y A$AP Rocky.
+                </p>
+            </div>
+        </div>
+        <!--Integrante 2-->
+        <div class="card" style="width: 18rem;">
+            <img src="https://th.bing.com/th/id/OIP.C2FCdsDCIviQrYzZXsSRqgHaJ4?w=204&h=272&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="kim Seok Jin">
+            <div class="card-body">
+                <p class="card-text">Kim Seok-jin (김석진), mejor conocido por su nombre artistico Jin, nació en Anyang-Gwangcheon, Corea del Sur el 4 de
+                diciembre de 1992, es compositor, cantante, bailarín y modelo.
+                
+                El cantante Jin de BTS tiene 27 años, mide 179 cm y pesa 60 kg, tipo de Sangre es O, signo zodiacal sagitario, horoscopo
+                chino mono, idiomas coreano y mandarín, tiene dos apodos Pink Princess y Princess Jin ya que su color favorito es el
+                rosa. Su familia esta conformada por padres y hermano mayor.
+                Entre todo lo que tienes que saber sobre Jin está que es un gran fanático de los autos y más que nada la vida urbana en
+                Seúl lo que hizo que fuera el favorito para representar la categoría del "Live Seoul Like I Do".
+                
+                En el 2019 Kim Seok Jin de la banda surcoreana fue considerado el hombre más guapo del mundo, esta decisión fue tomada
+                mediante un portal de encuestas en la categoria k-pop, tal encuesta fue nombrada como “Mr Worldwide Handsome 2019” en la
+                cual el cantante obtuvo el primer lugar con 444 448 votos rebasando a celebridades como Harry Styles, Zac Efron, Zayn
+                Malik, entre otros.
+                
+Su número favorito es el 4.
+Siempre cubre su boca cuando ríe.
+Modelo a seguir: T.O.P de Big Bang.
+Color favorito: Rosa.
+Jin dice que parpadea mucho su ojo izquierdo cuando tiene hambre
+La persona que más quiere es a su papá.
+La persona con la que quiere estar para siempre es con su mamá
+Puede caminar como la niña del exorcista (con la espalda doblada hacia atrás).
+Siente que se ve terrible si se mira al espejo mientras baila.
+Dice que cuando come es feliz y que la gente le parece como ángeles.
+Está conforme con todo su cuerpo pero su parte preferida son sus mejillas.
+
+                .</p>
+            </div>
+        </div>
+        <!--Integrante 3-->
+        <div class="card" style="width: 18rem;">
+            <img src="https://th.bing.com/th/id/OIP.11spDSaebCp5Up3pm_VtUAHaNK?w=187&h=333&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="Min Yoongi">
+            <div class="card-body">
+                <p class="card-text">Min Yoon-gi, mejor conocido como Suga, es quien en el 2019 sorprendió con una colaboración con Halsey fue elegido para representar lo que implica adaptarse a diferentes situaciones de la vida, algo que de manera excepcional puedes hacer en Corea del Sur debido a la gran variedad de actividades que encuentras en Seúl, desde una buena comida tradicional hasta visitar lugares icónicos de la ciudad.
+
+                    Datos personales de Suga
+                    Todos los datos que una fan de Suga debe de saber:
+                    
+                    Nombre real: Min Yoon Gi (민윤기)
+                    Apodos: Mr. Swag, Min inmóvil, Papá.
+                    Profesión: Rapero, Bailarín, Compositor y Productor.
+                    Fecha de nacimiento: 09-Marzo-1993 (26 Años de edad)
+                    Lugar de nacimiento: Daegu, Corea del Sur
+                    Estatura: 176cm
+                    Peso: 57kg
+                    Tipo de sangre: O
+                    Signo Zodiacal: Piscis
+                    Posición: Rapero y Bailarín.
+                    Familia: Padres y hermano mayor..</p>
+            </div>
+        </div>
+        <!--Integrante 4-->
+        <div class="card" style="width: 18rem;">
+            <img src="https://th.bing.com/th/id/OIP.TrNUArUspvrPBa4kTilvcAHaNK?w=187&h=333&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="Jung Hoseok">
+            <div class="card-body">
+                <p class="card-text">Jung Ho-seok, o mejor conocido como J-Hope del grupo de K-Pop BTS, es el portavoz que te lleva a conocer los sitios más espectaculares que rodean a la capital de Corea de Sur, de tal forma que el famoso J-Hope demuestra la gran cantidad de sorpresas que puedes encontrar en Seúl.
+
+                    Datos personales de J-Hope
+                    Nombre Real: Jung Ho Seok (정호석)
+                    Apodos: Hope, Sonrisa Hoya, Caballo
+                    Profesión: Rapero, Bailarín, Compositor, Coreógrafo y MC
+                    Fecha de nacimiento: 18-Febrero-1994 (25 Años)
+                    Lugar de nacimiento: Kwangju, Corea del Sur
+                    Estatura: 177cm
+                    Peso: 59kg
+                    Tipo de sangre: A
+                    Signo Zodiacal: Acuario
+                    Signo chino: Perro
+                    Posición: Rapero y Bailarín.</p>
+            </div>
+        </div>
+        <!--Integrante 5-->
+        <div class="card" style="width: 18rem;">
+            <img src="https://th.bing.com/th/id/OIP.wY9u7ZRNIDp8OO46XhphDQHaKw?w=204&h=297&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="Park Jimin">
+            <div class="card-body">
+                <p class="card-text">Jimin, cuyo nombre real es Park Ji-min, es el integrante más coqueto de BTS, pues es quien te lleva a descubrir lo que solamente puedes encontrar en Seúl, todo tipo de lugares que hacen de esta ciudad un verdadero paraíso por el que tienen que ir a conocer, Jimin sin duda hace que esta característica resalta con su personalidad.
+
+                    Aquí conocerás todos los detalles que rodean a este increíble integrante:
+                    
+                    Datos personales de Jimin de BTS
+                    Aquí te dejamos los datos personales de Jimin para que puedas conocer un poco más si es que es tu integrante favorito de BTS.
+                    Nombre Real: Park Jimin (박지민)
+Sobrenombre Chino: Ji Mi Hua (吉米华)
+Apodos: Jiminnie, Dooly, ChimChim, Anibalknae,Baby Koala
+Profesión: Cantante, Bailarín, Modelo y MC
+Fecha de Nacimiento: 13-Octubre-1995 (25 Años)
+Lugar de Nacimiento: Busan, Corea del Sur
+Estatura: 1.75 cm
+Peso: 61kg
+Tipo de Sangre: A
+Signo zodiacal: Libra
+Familia: Padre, Madre, hermano menor
+Signo zodiacal chino: Jabalí
+Posición: Vocalista,Bailarín Principal
+Hoobies: Dibujar, Bailar, Artes marciales y Jugar videojuegos
+Familia: Padres y hermano menor
+Idiomas: Actualmente estudia inglés
+                    .</p>
+            </div>
+        </div>
+        <!--Integrante 6
+        Si son mas integrantes copia otra card, si son menos eliminalas-->
+        <div class="card" style="width: 18rem;">
+            <img src="https://th.bing.com/th/id/OIP.i1VMatRMhfKgRV7pIDLGmQHaLH?w=204&h=306&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="Kim Taehyung">
+            <div class="card-body">
+                <p class="card-text">Kim Tae Hyung también conocido como Taehyung o simplemente V, es un artista surcoreano de hip hop famoso por su voz en el popular bandboy de K-Pop BTS. Fue el último integrante de BTS uniéndose a la banda en el 2011 pero presentado hasta el 2013 y desde entonces se ha vuelto el idol más popular ademàs de que fue el primer integrante de la banda en tener un fansite.
+
+                    Datos personales de V
+                    Toda fan de BTS debe conocer cada uno de los detalles de sus integrantes, aquí te damos los datos de V:
+
+Nombre real: Kim Tae Hyung / 김태형 
+Nombre artistico: V / 뷔 
+Profesión: Cantante, Bailarín, Modelo y MC.
+Fecha de nacimiento: 30-Diciembre-1995 (25 Años)
+Lugar de nacimiento: Daegu-Kojang Seoúl, Corea del Sur
+Estatura: 178cm
+Peso: 58kg
+Tipo de Sangre: AB
+Signo zodiacal: Capricornio
+Signo zodiacal Chino: Jabalí
+Posición: Vocalista y Bailarín.
+Instrumentos: Saxofón
+Familia: Padres y hermanos menores.
+Idiomas: Coreano y japonés (básico)
+Apodos: TaeTae (Sus amigos lo llaman así porque es fácil de pronunciar.), Blank Tae (porque siempre tiene una expresión en blanco), Alíen, chola man.
+Hábitos: Morderse las uñas, abrir la boca, tocar cualquier cosa que le parezca linda.
+                    .</p>
+            </div>
+        </div>
+        <!--Integrante 7
+        Si son mas integrantes copia otra card, si son menos eliminalas-->
+        <div class="card" style="width: 18rem;">
+            <img src="https://th.bing.com/th/id/OIP.kGeQVOQFlP5cFWHb4H7MZwHaNK?w=187&h=333&c=7&r=0&o=5&pid=1.7" class="card-img-top" alt="Jeon Junkook">
+            <div class="card-body">
+                <p class="card-text">Jungkook es el integrante de BTS más popular de acuerdo a las búsqueda en internet, superando por poco a Jimin que también es aclamado por el ARMY.
+
+                    Aquí podrás conocer la biografía de Jungkook y datos que te interesarán mucho si eres fan de este integrante de BTS:
+                    
+                    Datos personales de Jungkook
+                    Todas las fans de BTS desean conocer los detalles de cada uno de los integrantes. Te damos los datos de Jungkook:
+                    Nombre: 정국 (Jung Kook)
+Nombre real: 전정국 (Jeon Jeongguk)
+Apodos: Jeon Jungkookie (Suga lo llama así), Kookie
+Profesión: Cantante, Rapero, Bailarín, Maknae
+Fecha de Nacimiento: 01-Septiembre-1997 (22 Años)
+Lugar de Nacimiento: Busan, Corea del Sur
+Estatura: 178 cm
+Peso: 61kg
+Tipo de sangre: A
+Signo zodiacal chino: Buey
+Signo zodiacal: Virgo
+                    .</p>
+            </div>
+        </div>
+
+        </ul>
+    </div>
+    <!--formulario-->
+    <div>
+        <h3>Contactanos!!!!</h3>
+        <form action="">
+            <input type="email" placeholder="heraldijaimesflores@email.com">
+        </form>
+        <br>
+        <button type="submit">Enviar</button>
+    </div>
+    <br>
+    <br>
+    <!--footer-->
+    <footer><small>derechos reservados po Estefani Heraldi Jaimes Flores</small></footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    </div>
+
+    <!--pie de página-->
+    <footer>
+        <!--Etiqueta small para que el pie de página se vea más pequeño-->
+        <p><small>Estefani Heraldi &hearts; para <a href="https://tecnolochicas.mx/"
+                    target="_blank">tecnolochicas.mx</a> 2022</small></p>
+    </footer>
+
+    <!--Enlace al archivo JS de Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
+</body>
+
+</html>
